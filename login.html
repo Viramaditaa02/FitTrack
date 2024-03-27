@@ -1,26 +1,48 @@
-login.html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Halaman Pendaftaran Kursus</title>
-</head>
-<body>
-    <header>
-        <h1>Login</h1>
-    </header>
-
-    <form action="process_login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Login</button>
-    </form>
-
-    <p>Anda belum punya akun? <a href="register.html">Daftar disini</a></p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <center>
+      <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="/" class="home-link">
+            <div class="navbar-logo"></div>
+            Website FitTrack
+          </a>
+          <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="indeks.html">Home</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="login.html">Login</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="register.html">daftar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="form-login">
+          <h3>Login</h3>
+          <p>Login Jika anda Sudah memiliki Akun</p>
+          <label for="">Username</label>
+          <input class="input" type="text" name="username" placeholder="Username" />
+          <label for="">Password</label>
+          <input class="input" type="password" name="password" placeholder="Password" />
+          <button class="button" type="submit">Login</button>
+          <a href="register.html" class="link-register">Tidak Punya Akun?</a>
+        </div>
+      </main>
+    
+    </center>
+  </body>
 </html>
+

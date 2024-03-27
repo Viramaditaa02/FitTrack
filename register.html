@@ -1,35 +1,48 @@
-register.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Buat Akun Anda</title>
+    <title>Register</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Register</h1>
-    </header>
-
-    <form action="" method="post">
-        <label for="Nama Lengkap">Nama Lengkap:</label>
-        <input type="text" id="Nama Lengkap" name="Nama Lengkap" required>
-
-        <label for="Email\">Email:</label>
-        <input type="text" id="username" name="username" required>
-        
-        
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Daftar</button>
-    </form>
-
-    <p>Sudah punya akun? <a href="login.html">Login disini</a></p>
-
-    <!-- <footer>
-        <p>&copy; </p>
-    </footer> -->
+    <center>
+        <header id="navbar">
+            <nav class="navbar-container container">
+                <a href="/" class="home-link">
+                    <div class="navbar-logo"></div>
+                    Website FitTrack
+                </a>
+                <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+                    aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="navbar-menu" aria-labelledby="navbar-toggle">
+                    <ul class="navbar-links">
+                        <li class="navbar-item"><a class="navbar-link" href="indeks.html">Home</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="login.html">Login</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="register.html">daftar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="form-login">
+                <h3>daftar</h3>
+                <label for="">Masukkan Email</label>
+                <input class="input" type="text" name="nama" placeholder="Masukkan Email" />
+                <label for="">Masukkan Username</label>
+                <input class="input" type="text" name="nama" placeholder="Nama Lengkap" />
+                <label for="">Password</label>
+                <input class="input" type="password" name="password" placeholder="Password" />
+                <button class="button" type="submit">daftar</button>
+            </div>
+        </main>
+    </center>
 </body>
 </html>
+
