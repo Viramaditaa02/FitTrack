@@ -44,11 +44,49 @@
                     <p>Ayo sehat bersama kami</p>
                     <button type="submit" ></a>daftar</button>
                 </div>
-                <img class="jumbotron-img" src="Cuplikan layar 2024-03-19 230915.png" alt="">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="gambar1.jpg" alt="gambar1">
+                    </div>
+                    <div class="slide">
+                        <img src="gambar2.jpg" alt="gambar2">
+                    </div>
+                    <div class="slide">
+                        <img src="gambar3.jpg" alt="gambar3">
+                    </div>
+                    <div class="slide">
+                        <img src="gambar4.jpg" alt="gambar4">
+                    </div>
+                    <div class="navigation">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(-1)">&#10095;</a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
-</body>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n){
+            showSlides(slideIndex += n)
+        }
 
+        function showSlides(n){
+            var x;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length){
+                slideIndex = 1;
+            }
+            if (n < 1){
+                slideIndex = slides.length
+            }
+            for (x = 0; x < slides.length; x++){
+                slides[x].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+</body>
 </html>
 

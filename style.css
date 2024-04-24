@@ -196,6 +196,7 @@ main {
 .jumbotron-text {
     width: 30%;
     font-weight: 500;
+    margin-left: 50px;
 }
 
 .jumbotron-img {
@@ -326,6 +327,7 @@ main {
     .jumbotron-text {
         width: 100% !important;
         padding-left: 20px;
+        margin-left: 50px;
     }
 
     /* card-categories responsive */
@@ -386,90 +388,63 @@ main {
     margin-top: 10px;
 }
 
-/* responsive */
-@media screen and (max-width: 1023px) {
-    .container {
-        width: 100%;
-        margin: 0 auto;
+.slides .slide{
+    display: none;
+  }
+  .slides .slide img{
+    width: 60%;
+    height: 20%;
+    margin-left: 150px;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .slides .navigation{
+    position: absolute;
+    margin-left: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  .slides .navigation .prev, .slides .navigation .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    transition: 0.6s ease;
+  }
+  .slides .navigation .prev:hover, .slides .navigation .next:hover{
+    background:  rgb(255, 255, 255)
+  }
+  @keyframes fade {
+    from{opacity: 0.3}
+    to {opacity: 1}
+  }
+  @media (max-width: 992px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 18px;
+      padding: 13px;
     }
-
-    /* navbar responsive */
-    nav {
-        padding: 0 40px 0 50px;
-        position: relative;
+  }
+  @media (max-width: 768px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 15px;
+      padding: 10px;
     }
-
-    nav .menu-btn i {
-        display: block;
+  }
+  @media (max-width: 576px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 12px;
+      padding: 7px;
     }
-
-    #click:checked~.menu-btn i:before {
-        content: "\f00d";
+  }
+  @media (max-width: 360px){
+    .slides .navigation .prev, .slides .navigation .next{
+      font-size: 11px;
+      padding: 6px;
     }
-
-    nav ul {
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        background: rgba(0, 0, 0, 0.85);
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.3s ease;
-    }
-
-    #click:checked~ul {
-        left: 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 40px 0;
-    }
-
-    nav ul li a {
-        width: 100%;
-        margin-left: -100%;
-        display: block;
-        font-size: 20px;
-        color: #fff;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    #click:checked~ul li a {
-        margin-left: 0px;
-    }
-
-    nav ul li a.active,
-    nav ul li a:hover {
-        color: #ffb72b;
-    }
-
-    /* jumbotron responsive */
-    .jumbotron {
-        flex-direction: column-reverse;
-        border-radius: 0px !important;
-        justify-content: center;
-    }
-
-    .jumbotron-text {
-        width: 100% !important;
-        padding-left: 20px;
-    }
-
-    /* card-categories responsive */
-    .card-categories {
-        flex-direction: column;
-        gap: 20px;
-        margin: 0 10px;
-    }
-
-    .card {
-        width: 100% !important;
-    }
-
-    /* form-login responsive */
-    .form-login {
-        width: 80%;
-    }
-}
+  }
