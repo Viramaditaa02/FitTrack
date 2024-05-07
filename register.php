@@ -32,17 +32,36 @@
         </header>
         <main>
             <div class="form-login">
+                <form action="register.php" method="post">
                 <h3>daftar</h3>
                 <label for="">Masukkan Email</label>
-                <input class="input" type="text" name="nama" placeholder="Masukkan Email" />
+                <input class="input" type="text" id="email" name="nama" placeholder="Masukkan Email" >
                 <label for="">Masukkan Username</label>
-                <input class="input" type="text" name="nama" placeholder="Nama Lengkap" />
+                <input class="input" type="text" id="username" name="nama" placeholder="Nama Lengkap" >
                 <label for="">Password</label>
-                <input class="input" type="password" name="password" placeholder="Password" />
-                <button class="button" type="submit">daftar</button>
+                <input class="input" type="password" id="password" name="password" placeholder="Password" />
+                <button class="button" value="input data" type="submit" onclick="Rform()">daftar</button>
+            </form>
             </div>
         </main>
     </center>
+    <script>
+        function Rform(){
+            let email = document.getElementById("email").value;
+             username = document.getElementById("username").value;
+            var pass = document.getElementById("Password").value;
+            
+            if(email === "dummy@yahoo.com" || username === "dummy" || pass === "9090"){
+                alert("Anjay bener dong");
+                return false;
+            }else{
+                alert("Sudah Terdaftar");
+                return true;
+            }
+                
+        
+        }
+    </script>
 </body>
 </html>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="assets/icon.png" />
@@ -7,13 +8,14 @@
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User</title>
+    <title>Jadwal Entry</title>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="logo-details">
             <i class="bx bx-category"></i>
-            <span class="logo_name">FitTtack</span>
+            <span class="logo_name">FitTrack</span>
         </div>
         <ul class="nav-links">
             <li>
@@ -50,35 +52,28 @@
                 <i class="bx bx-menu sidebarBtn"></i>
             </div>
             <div class="profile-details">
-                <span class="admin_name"> FitTrack</span>
+                <span class="admin_name">FitTrack</span>
             </div>
         </nav>
         <div class="home-content">
-            <h3>Data FitTrack </h3>
-            <button type="button" class="btn btn-tambah">
-                <a href="jenisolahraga-entry.html">Tambah Data</a>
-            </button>
-            <table class="table-data">
-                <thead>
-                    <tr>
-                        <th style="width: 20%">Jenis Olahraga</th>
-                        <th style="width: 20%">Harga Latihan/Bln</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Zumba</td>
-                        <td><200.000></RP></td>
-                        <td><a href="">Edit</a> | <a href="">Hapus</a></td>
-                    </tr>
-                    <tr>
-                        <td>GYM</td>
-                        <td><150.000></RP></td>
-                        <td><a href="">Edit</a> | <a href="">Hapus</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3>Input Jadwal Latihan Kamu Sekarang YUKK</h3>
+            <div class="form-login">
+                <form id="jadwalForm">
+                    <label for="nama">Nama</label>
+                    <input class="input" type="text" name="nama" id="nama" placeholder="Nama" required/>
+                    <label for="jenis_olahraga">Jenis Olahraga </label>
+                    <input class="input" type="text" name="jenis_olahraga" id="jenis_olahraga" placeholder="Jenis Olahraga" required/>
+                    <label for="harga"> Harga Latihan / Bln</label>
+                    <input class="input" type="text" name="harga" id="harga" placeholder="Harga Latihan / Bln" required/>
+                    <label for="tanggal_mulai">Tanggal Mulai</label>
+                    <input class="input" type="date" name="tanggal_mulai" id="tanggal_mulai" placeholder="Tanggal Mulai" required/>
+                    <label for="tanggal_selesai">Tanggal Selesai</label>
+                    <input class="input" type="date" name="tanggal_selesai" id="tanggal_selesai" placeholder="Tanggal Selesai" required/>
+                    <button type="submit" class="btn btn-simpan" name="simpan">
+                        Simpan
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
     <script>
@@ -90,6 +85,21 @@
                 sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
             } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         };
+
+        document.getElementById("jadwalForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Simpan data atau lakukan tindakan lainnya di sini
+
+            // Set semua inputan menjadi kosong setelah data disimpan
+            document.getElementById("nama").value = "";
+            document.getElementById("jenis_olahraga").value = "";
+            document.getElementById("harga").value = "";
+            document.getElementById("tanggal_mulai").value = "";
+            document.getElementById("tanggal_selesai").value = "";
+
+            // Tampilkan prompt box setelah berhasil menyimpan data
+            alert("Data telah berhasil disimpan!");
+        });
     </script>
 </body>
 

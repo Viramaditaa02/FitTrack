@@ -8,14 +8,14 @@
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jadwal Entry</title>
+    <title>User</title>
 </head>
 
 <body>
     <div class="sidebar">
         <div class="logo-details">
             <i class="bx bx-category"></i>
-            <span class="logo_name">FitTrack</span>
+            <span class="logo_name">FitTtack</span>
         </div>
         <ul class="nav-links">
             <li>
@@ -28,15 +28,15 @@
                 <a href="jenisolahraga.html">
                     <i class="bx bx-box"></i>
                     <span class="links_name">Jenis Olahraga </span>
-                 </a>
-         
+                </a>
+
             </li>
             <li>
                 <a href="jadwal.html">
                     <i class="bx bx-list-ul"></i>
                     <span class="links_name">Jadwal</span>
-                 </a>
-         
+                </a>
+
             </li>
             <li>
                 <a href="#">
@@ -52,28 +52,35 @@
                 <i class="bx bx-menu sidebarBtn"></i>
             </div>
             <div class="profile-details">
-                <span class="admin_name">FitTrack</span>
+                <span class="admin_name"> FitTrack</span>
             </div>
         </nav>
         <div class="home-content">
-            <h3>Input Jadwal Latihan Kamu Sekarang YUKK</h3>
-            <div class="form-login">
-                <form action="">
-                    <label for="nama">Nama</label>
-                    <input class="input" type="text" name="nama" id="nama" placeholder="Nama" />
-                    <label for="jenis_olahraga">Jenis Olahraga </label>
-                    <input class="input" type="texy" name="Jenis Olahraga" id="jenisolahraga" placeholder="Jenis Olahraga" />
-                    <label for="Harga"> Harga Latihan / Bln</label>
-                    <input class="input" type="text" name="Harga Latihan / Bln" id="Harga Latihan / Bln" placeholder="Harga Latihan / Bln" />
-                    <label for="tanggal_Mulai">Tanggal Mulai</label>
-                    <input class="input" type="date" name="tanggal Mulai" id="tanggal Mulai" placeholder="tanggal Mulai" />
-                    <label for="tanggal_Selesai">Tanggal</label>
-                    <input class="input" type="date" name="tanggal Selesai" id="tanggal Selesai" placeholder="tanggal Selesai" />
-                    <button type="submit" class="btn btn-simpan" name="simpan">
-                        Simpan
-                    </button>
-                </form>
-            </div>
+            <h3>Data FitTrack </h3>
+            <button type="button" class="btn btn-tambah">
+                <a href="jenisolahraga-entry.html">Tambah Data</a>
+            </button>
+            <table class="table-data">
+                <thead>
+                    <tr>
+                        <th style="width: 20%">Jenis Olahraga</th>
+                        <th style="width: 20%">Harga Latihan/Bln</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Zumba</td>
+                        <td><200.000></RP></td>
+                        <td><a href="#" class="edit-link">Edit</a> | <a href="#" class="delete-link">Hapus</a></td>
+                    </tr>
+                    <tr>
+                        <td>GYM</td>
+                        <td><150.000></RP></td>
+                        <td><a href="#" class="edit-link">Edit</a> | <a href="#" class="delete-link">Hapus</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     <script>
@@ -85,7 +92,9 @@
                 sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
             } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         };
-    </script>
-</body>
 
-</html>
+       
+
+
+
+

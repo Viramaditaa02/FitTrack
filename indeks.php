@@ -42,8 +42,8 @@
                 <div class="jumbotron-text">
                     <h1>Welcome TO FitTrack</h1>
                     <p>Ayo sehat bersama kami</p>
-                    <button type="submit" ></a>daftar</button>
                 </div>
+                <button type="submit" >daftar</button>
                 <div class="slides">
                     <div class="slide">
                         <img src="gambar1.jpg" alt="gambar1">

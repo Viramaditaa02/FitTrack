@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
+        <body>
+        <script>
+          alert("YUK BUAT JADWAL SEHAT SEKARANG :)");
+        </script>
+        </body>
+    
+      
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="assets/icon.png" />
@@ -92,6 +99,24 @@
             </table>
         </div>
     </section>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Onload</title>
+      </head>
+      <body>
+        <p id="demo"></p>
+      
+        <script>
+          window.addEventListener("load", function() {
+            document.getElementById("demo").innerHTML = "Halaman Web Berhasil Ditampilkan";
+          });
+        </script>
+      </body>
+      
+
     <script>
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
